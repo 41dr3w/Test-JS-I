@@ -182,17 +182,19 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+var result
 
- var result
 
-  for(var x=3;x<=9;x=+2){
-    if( numero%2!=0 && numero%x!=0 ){ 
-       result=true  
-    }
-    result=false     
+for(var x=2;x<=9;x++){
+    if( (numero!=x&&numero%x==0) || numero==1) {
+      result=false
+      break
+    } 
+    result=true
   }
- return result
- }
+
+return result
+}
 
 function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
